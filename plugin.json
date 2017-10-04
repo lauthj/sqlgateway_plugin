@@ -1,0 +1,22 @@
+{
+  "name": "custom.python.sql_gateway_plugin",
+  "version": "1.1",
+  "type": "python",
+  "entity": "PROCESS_GROUP_INSTANCE",
+  "processTypeNames": ["TOMCAT"],
+  "source": {
+    "package": "sqlgateway_plugin",
+    "className": "MonitorAppPlugin",
+    "install_requires": ["requests>=2.6.0","BeautifulSoup4"],
+    "activation": "Singleton"
+  },
+  "metrics": [
+    
+    {
+      "timeseries": {
+        "key": "record_diff",
+        "unit": "Count"
+      }
+    }
+  ]
+}
